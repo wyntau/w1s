@@ -1,0 +1,12 @@
+*html #container{filter: Alpha(opacity=87); /** IE **/}
+
+*html #smelislist{margin:25px -380px;filter:alpha(opacity=80);}
+
+*html #footbar { /*--IE6 Hack - Fixed Positioning to the Bottom--*/
+margin-top: -1px; /*--Prevents IE6 from having an infinity scroll bar - due to 1px border on #footpanel--*/
+position: absolute;
+top:expression(eval(document.compatMode &&document.compatMode=='CSS1Compat') ?documentElement.scrollTop+(documentElement.clientHeight-this.clientHeight) : document.body.scrollTop +(document.body.clientHeight-this.clientHeight));
+}
+
+
+* html #facebox_overlay{position:absolute;height:expression(document.body.scrollHeight>document.body.offsetHeight?document.body.scrollHeight:document.body.offsetHeight+'px');}
